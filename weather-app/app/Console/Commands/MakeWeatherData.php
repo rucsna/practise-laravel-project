@@ -29,7 +29,7 @@ class MakeWeatherData extends OutputCommand
         return 0;
     }
 
-    protected function generateWeatherData()
+    protected function generateWeatherData(): array
     {
         $startDate = new \DateTime(date('Y-m-01 00:00:00'));
         $startDate->modify('-6 month');
