@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 
 class MakeWeatherData extends OutputCommand
 {
-    protected $signature = 'app:make:weather:data';
+    protected $signature = 'make:weather:data';
     protected $description = 'Generate weather data';
     protected $weatherDataFilePath;
 
