@@ -13,12 +13,13 @@ return new class extends Migration
     {
         Schema::create('measurements', function (Blueprint $table) {
             $table->id();
-            $table->date('measurement_date');
+            $table->unsignedBigInteger('measurement_day_id');
             $table->unsignedBigInteger('parameter_id');
             $table->integer('value');
             $table->timestamps();
 
             $table->foreign('parameter_id')->references('id')->on('parameters');
+            $table->foreign('measurement_day_id')->references('id')->on('measurement_days');
         });
     }
 
