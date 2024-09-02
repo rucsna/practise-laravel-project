@@ -1,9 +1,14 @@
 # Weather-app-db database schema
 
-## measurements
-this table stores the daily weather measurements, with each row representing one day's measurements for different parameters
+## measurement_day
+this table stores each unique measurement date
 - `id` INT (primary key)
-- `measurement_date` DATE - *date of the measurement*
+- `date` DATE - *date of the measurement*
+
+## measurements
+this table stores the weather measurement values
+- `id` INT (primary key)
+- `measurement_day_id` INT (foreign key) - *referencing 'measurement_day.id'*
 - `parameter_id` INT (foreign key) - *referencing 'parameters.id'*
 - `value` INT - *measured value of the given parameter*
 
