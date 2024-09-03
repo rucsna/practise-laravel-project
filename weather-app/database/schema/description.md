@@ -1,6 +1,6 @@
 # Weather-app-db database schema
 
-## measurement_day
+## measurement_days
 this table stores each unique measurement date
 - `id` INT (primary key)
 - `date` DATE - *date of the measurement*
