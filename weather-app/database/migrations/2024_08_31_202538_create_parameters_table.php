@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('parameters', function (Blueprint $table) {
             $table->id();
             $table->string('name', 20);
-            $table->string('value', 10);
+            $table->string('unit', 10);
             $table->timestamps();
         });
     }

@@ -8,7 +8,7 @@ class Parameter extends Model
 {
     protected $fillable = [
         'name',
-        'value'
+        'unit'
     ];
 
     public function measurements ()
