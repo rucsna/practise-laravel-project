@@ -20,7 +20,7 @@ abstract class OutputCommand extends Command
         parent::__construct();
     }
 
-    protected function output(string $message, int $messageType = self::MSG_PLAIN)
+    protected function output(string $message, int $messageType = self::MSG_PLAIN): void
     {
         if (self::MSG_PLAIN === $messageType) {
             $this->getOutput()->writeln($message);
